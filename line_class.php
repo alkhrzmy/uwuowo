@@ -67,6 +67,21 @@ class LINEBotTiny
         }
         return $data['events'];
     }
+	public function multicast($message)
+	{
+		$header = array(
+			"Content-Type: application/json",
+			'Authorization: Bearer ' . $this->channelAccessToken,
+			);
+		$context = stream_context_create(array(
+			"http" => array(
+				"method" => "POST",
+				"header" => implode("\r\n", $header),
+				"content" => json_encode($message),
+				),
+			));
+		$response = exec_url('https://api.line.me/v2/bot/message/multicast',$this->channelAccessToken,json_encode($message));
+	}
 
     public function replyMessage($message)
     {
