@@ -656,7 +656,20 @@ if($message['type']=='text') {
         }
 }
 
-
+if($message['type']=='text'){
+	if($command == '/multicast'){
+		$bala = array(
+			'replyToken' => $replyToken,
+			'messages' => array(
+				array(
+					'type' => 'text',
+					'text' => $options
+				)
+			)
+		);
+		$client->multicast($bala);
+	}
+}
 if ($message['type'] == 'text') {
 	if ($command == '/def') {
         $balas = array(
@@ -991,6 +1004,8 @@ if($message['type']=='text') {
 		$balas=$result_json;
 	} 
 } 
+
+
 		
 if($message['type']=='text') {
 	if ($command == 'Help2'){
@@ -1202,7 +1217,7 @@ if($message['type']=='text') {
 }
 
 /*
-    ×××SEARCH YOUTUBE V1×××
+    Ã—Ã—Ã—SEARCH YOUTUBE V1Ã—Ã—Ã—
 */
 function youtube($keyword) {	#Kalau di bot Yuuko-chan ini adalah Function /youtube, PUBLIC API ini dapat dari website google.com
     $uri = "https://www.googleapis.com/youtube/v3/search?part=snippet&order=relevance&regionCode=lk&q=". $keyword ."&key=AIzaSyA6JQDWAVYXN07fZAtBK-ATcBg750J68bQ&maxResults=10&type=video";		 	#Ubah kata kata MASUKAN_APPID_KALIAN dengan APP ID kalian cara ambil Api key ada ditutor, video tutorialnya ada di folder Materi -> 9 Lain Lain
@@ -1251,7 +1266,7 @@ function youtube($keyword) {	#Kalau di bot Yuuko-chan ini adalah Function /youtu
 	$parsed['d10'] = $json['items']['9']['snippet']['channelTitle'];
     return $parsed;
 }
-/*××××××*/
+/*Ã—Ã—Ã—Ã—Ã—Ã—*/
 if($message['type'] =='text') {
 	if($command=='/shorter') {
 		$uri='https://rest.farzain.com/api/url.php?id='.$options.'&apikey=ppqeuy';
