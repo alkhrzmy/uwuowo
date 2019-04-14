@@ -1019,24 +1019,24 @@ if($message['type']=='text') {
 		$responses['messages']['0']['contents']['contents'][0]['body']['contents'][0]['type'] = 'text';
 		$responses['messages']['0']['contents']['contents'][0]['body']['contents'][0]['text'] = 'Help Command';
 		$responses['messages']['0']['contents']['contents'][0]['body']['contents'][1]['type'] = 'text';
-		$responses['messages']['0']['contents']['contents'][0]['body']['contents'][1]['text'] = '??????Help Message????
-?[~] /ig [username]
-?[~] /shalat [daerah]
-?[~] /joox [judul lagu] 
-?[~] /jam
-?[~] /def [kata] 
-?[~] /img [kata] 
-?[~] /yt [judul] 
-?[~] @bye
-?[~] /creator
-?[~] /ssweb [link] 
-?[~] Me
-?[~] /brainly [pertanyaan] 
-?[~] /loginqr
-?[~] /shorter [url] 
-?[~] /film-syn [judul film]
-?[~] /translate [text]
-??????END?????';
+		$responses['messages']['0']['contents']['contents'][0]['body']['contents'][1]['text'] = 'Help Messages
+[~] /ig [username]
+[~] /shalat [daerah]
+[~] /joox [judul lagu] 
+[~] /jam
+[~] /def [kata] 
+[~] /img [kata] 
+[~] /yt [judul] 
+[~] @bye
+[~] /creator
+[~] /ssweb [link] 
+[~] Me
+[~] /brainly [pertanyaan] 
+[~] /loginqr
+[~] /shorter [url] 
+[~] /film-syn [judul film]
+[~] /translate [text]
+END';
 		$responses['messages']['0']['contents']['contents'][0]['body']['contents'][1]['wrap'] = true;
 		$responses['messages']['0']['contents']['contents'][1]['type'] = 'bubble';
 		$responses['messages']['0']['contents']['contents'][1]['body']['type'] = 'box';
