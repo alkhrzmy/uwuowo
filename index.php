@@ -43,7 +43,7 @@ if (count($pesan_datang) > 2) {
         $options .= $pesan_datang[$i];
     }
 }
-$path = "https://alkhrzmy.online/botreminder/";
+$path = "https://alkhrzmy.online/bot/";
 $IdAdmin = "U6492dbccec39e3db72af41aa3f0ebad5";
 
 if($type == 'follow') {
