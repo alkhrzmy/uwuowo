@@ -222,7 +222,7 @@ if ($message['type'] == 'text') {
 }
 
 function ytdown($keyword) {
-	$uri = "https://rest.farzain.com/api/yt_download.php?id=". $keyword ."&apikey=1MJ11rZNOM4XbZn8U0PTIsAJh";
+	$uri = "https://www.saveoffline.com/process/?url=".$keyword."&type=json";
 	$response = Unirest\Request::get("$uri");
 	$json = json_decode($response->raw_body, true);
     $parsed = array();
